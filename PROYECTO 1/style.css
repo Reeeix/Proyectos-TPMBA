@@ -1,0 +1,907 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid red;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration:none;
+}
+
+button:hover {
+  cursor: pointer;
+  scale: 1.1;
+  transition: 0.5s;
+  border:none;
+}
+
+:root {
+/*  Fuentes */
+  -rrg-fuente-principal: "Lora", serif;
+  -rrg-fuente-secundaria: "Mulish", sans-serif;
+  /* Colores */
+  --rrg-bgcolor:#f5f5f5;
+  --rrg-bgcolor-buttons: #ffffff;
+  --rrg-bgcolor-cards: #d9d9d9;
+  --rrg-scrollbar-color: #949494;
+  --rrg-bgfooter-small: #404243;
+  --rrg-bgfooter:#000000;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* HEADER */
+
+ul {
+  list-style: none;
+  display: flex;
+  padding-left: 40px;
+  width: 450px;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-family: "Mulish", sans-serif;
+}
+
+.header1 {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px 0px 30px;
+}
+
+.logo-y-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.iconos {
+  display: flex;
+  width: 100px;
+  justify-content: flex-end;
+  padding-right: 30px;
+  gap: 30px;
+}
+
+.iconos > img {
+  height: 25px;
+}
+
+.icono_menu {
+  display: none;
+}
+
+/* Sección 1 - Productos */
+
+.section1 {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  height: 600px;
+}
+
+.section1 img {
+ width: 100%;
+ display: block;
+ object-fit: contain;
+}
+
+.texto {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  top:100px;
+  left: 60px;
+  gap: 20px;
+}
+
+.texto h1 {
+  font-size: 70px;
+}
+
+.texto p {
+  font-size: 20px;
+  font-family:"Mulish", sans-serif; ;
+}
+
+/* Main */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 45px;
+  margin: 45px;
+  font-family: "Mulish", sans-serif;
+}
+
+.card  {
+  background-color: var(--rrg-bgcolor-cards);
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.info {
+  width: 100%;
+  padding: 30px 20px 0px 30px;
+}
+
+.card img {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.card .boton-y-color {
+  width: 100%;
+  height:55px ;
+  display: flex;
+  padding: 0 30px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom:30px;
+}
+
+.boton_principal {
+  font-family:"Mulish", sans-serif;
+  background-color: var(--rrg-bgcolor-buttons);
+  border: none;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.colores {
+  display: flex;
+  width: 200px;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.color {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+
+.card4  img {
+  width: 100%;
+}
+
+.azulraro {
+  background-color: #515f91;
+}
+
+.rojo {
+  background-color: rgb(120, 0, 0);
+}
+
+.azulfuerte {
+  background-color: #0010a1;
+}
+
+.negro {
+  background-color: #000000;
+}
+
+.amarillo  {
+  background-color: #e2c324;
+}
+
+.grisraro {
+  background-color: #c5c5c5;
+}
+
+/* Sección 2 */
+
+.header2 {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  width: 100%;
+  height: 230px;
+  padding-left: 50px;
+  gap:30px;
+  
+}
+
+.header2 h1 {
+  font-family:"Lora", serif;
+  font-weight: 200;
+  font-size: 50px;
+  width: 45%;
+}
+
+.header2 p {
+  font-family: "Mulish", sans-serif;
+  font-weight: 525;
+}
+
+.imgcontainer {
+  flex-direction: column;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.imgcontainer > img {
+ width: 100%;
+ height: 600px;
+ object-fit: cover;
+}
+
+.browse {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 200px;
+  left: 50px;
+  background-color: #94949481;
+  width: 30%;
+  padding: 20px;
+  gap: 20px;
+  font-family: "Mulish", sans-serif ;
+  border-radius: 15px;
+}
+
+.browse > h2 {
+  color: white;
+  font-size: 40px;
+ 
+}
+
+.browse button {
+  width: 55%;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  font-size: 10px;
+  font-family: "Mulish", sans-serif;
+}
+
+/* Sección 3 - Servicios */
+
+.services {
+  display: flex;
+  padding: 40px;
+  gap: 60px;
+  flex-shrink: none;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service {
+ display: flex;
+ flex-direction: column;
+ min-width: 300px;
+ width: 90%;
+ max-width: 500px;
+ height: 450px;
+ background-color: var(--rrg-bgcolor-cards);
+ padding: 30px;
+ align-items: center;
+ justify-content: space-between;
+ border-radius: 15px;
+ overflow: auto;
+}
+
+.service div {
+  height: 70%;
+  width: 90%;
+}
+
+.service > div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.service h4 {
+  align-self: flex-start;
+  padding-left: 30px;
+  font-family: "Mulish", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.service button {
+  align-self: flex-start;
+  margin-left: 30px;
+  font-family: "Mulish", sans-serif;
+  padding: 15px;
+  border: none;
+  background-color: var(--rrg-bgcolor-buttons);
+  border-radius: 25px;
+}
+
+/* Scrollbar */
+.services {
+  --sb-track-color: #d9d9d9;
+  --sb-thumb-color: #949494;
+  --sb-size: 14px;
+}
+
+.services::-webkit-scrollbar {
+  width: 14px;
+  
+}
+
+.services::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 20px;
+}
+
+.services::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 20px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .services {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+/* Publicidad coche Rojo */
+
+
+.cocherojo {
+  width: 100%;
+  height: 90%;
+}
+
+.cocherojo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.publirojo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.publi_info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 20px;
+  bottom:70px;
+  left: 150px;
+  font-family: "Mulish", sans-serif ;
+  color: white;
+}
+
+.publi_info > h4 {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+/* Mercedes-Maybach wheel programme */
+
+.Mercedes-Maybach {
+  display: flex;
+  padding-top: 70px;
+  padding-left: 70px;
+  gap: 50px;
+  height: 600px;
+  width: 100%;
+}
+
+.infomaybach {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:50px;
+  font-family: "Mulish", sans-serif;
+}
+
+.infomaybach > h4 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.infomaybach p {
+  font-size: 12px;
+}
+
+.infomaybach button {
+  width: 80px;
+  border: none;
+  background-color: white;
+}
+
+.maybachpicture {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+.maybachpicture > img {
+  height: 100%;
+  display: flex;
+  object-fit: cover;
+}
+
+/* Contact Us */
+
+.contactUs {
+  height: 100px;
+  background-color: #404243;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mulish", sans-serif;
+}
+
+.question {
+  padding-right: 200px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.contactUs > button {
+  padding:10px;
+  border-radius: 25px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Mulish", sans-serif;
+}
+
+/* Footer */
+
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Mulish", sans-serif;
+  height: auto;
+}
+
+.Subscribe {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0px 100px 0px;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.Subscribe h4 {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.input {
+padding-top: 20px;
+width: 400px;
+display: flex;
+justify-content: center;
+position: relative;
+}
+
+.input > input {
+  padding: 10px 30px 10px 70px;
+  border-radius: 25px;
+  border-right: none;
+  border-color: white;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Mulish", sans-serif ;
+  font-size: 11px;
+  width: 350px;
+}
+
+.input > button {
+  padding: 10.5px 20px;
+  border: none;
+  border-radius: 27px;
+  position: absolute;
+  right:10px;
+  font-family:"Mulish", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.checkbox a {
+  color: white;
+  text-decoration: underline;
+}
+ /* Esto lo he buscado con la IA para darle estilos a la cajita y que quedara más mona */
+input[type="checkbox"] {
+  display: none;
+}
+
+label[for="miCheckbox"]::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 3px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background-color: black;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "\2713"; 
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.iconosF {
+  width: 200px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconosF img {
+  height: 100%;
+}
+
+.explorar {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  justify-content: space-around;
+  font-family: "Mulish", sans-serif;
+}
+
+.explorar a {
+  text-transform: capitalize;
+  color: var(--rrg-scrollbar-color);
+}
+
+.Explorer {
+ display: flex;
+ flex-direction: column;
+ width: 250px;
+ gap: 10px;
+}
+
+.Explorer ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.exp {
+  width: 200px;
+}
+
+.exp ul {
+  width: 100%;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.about > h4 {
+  width: 100px;
+}
+
+.about > ul {
+  width: 100px;
+}
+
+.help > ul {
+  width: 100%;
+}
+
+@media (max-width:600px) {
+   .service {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  header nav,
+  header .menu-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .section1 h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contactUs > .question > p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:920px) {
+  /* Header */
+  nav {
+    display: none;
+  }
+  .icono_menu {
+    display: flex;
+  }
+  .iconos {
+    padding-right: 10px;
+  }
+
+  /* Sección 1 */
+.section1 {
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+  height: 224px;
+}
+
+.section1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto {
+  position: absolute;
+  left: 30px;
+  bottom: 10px;
+  top: auto;
+  gap:10px;
+}
+
+.texto h1 {
+  font-size: 30px ;
+  font-weight: 50;
+}
+
+.texto p {
+  font-size: 15px;
+}
+
+/* Main */
+
+main {
+  grid-template-columns: 1fr;
+  gap:7px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card .boton-y-color {
+  bottom: 10px;
+  justify-content: center;
+}
+
+.info {
+  width: 100%;
+}
+
+.boton_principal {
+  font-size: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.colores {
+ display: none;
+}
+
+/* Sección 2 */
+
+.header2 {
+  height: auto;
+  padding: 20px;
+  gap:10px;
+}
+
+.header2 h1 {
+  font-size: 30px;
+}
+
+.header2 p {
+  font-size: 15px;
+}
+.imgcontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.imgcontainer > img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.browse {
+  position:static;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.browse > h2 {
+  font-size: 20px;
+  color: inherit;
+}
+
+.browse button {
+  width: 100%;
+  font-size: 16px;
+  padding:10px;
+}
+/* Servicios */
+
+  .service {
+    min-width: 90vw; 
+    height: auto;
+  }
+
+/*  Publicidad coche rojo */
+
+.publirojo {
+  flex-direction: column-reverse;
+}
+
+.publi_info {
+  position: initial;
+  color: #000000;
+  display: flex;
+  text-align: center;
+}
+
+/* Mercedes maybach wheel programme */
+
+.Mercedes-Maybach {
+  display: flex;
+  flex-direction: column;
+}
+.infomaybach {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  gap: 200px;
+  align-items: center;
+}
+
+.infomaybach > h4 {
+  order: 1;
+}
+
+.maybachpicture {
+  order: 2;
+  width: 60%;
+  height: auto;
+  position: relative;
+  justify-content: center;
+  padding: 0;
+}
+
+.maybachpicture > img {
+  border-radius: 25px;
+}
+
+.infomaybach > p,
+.infomaybach > button {
+    order: 3;
+}
+
+/*Para lo del orden le he preguntado a chatGPT porque creo que eso no lo hemos dado*/
+
+form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .input {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .input input, .input button {
+    width: 100%;
+  }
+
+  .input button {
+    position: static;
+  }
+
+footer .explorar {
+  flex-direction: column;
+}
+
+.Explorer {
+  width: 100%;
+  align-items: center;
+  align-content: center;
+}
+
+.Explorer ul {
+  width: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.about > h4 {
+  width: auto;
+}
+}
+
+@media (max-width: 1030px) {
+  .Mercedes-Maybach {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    height: auto;
+  }
+
+  .maybachpicture {
+    width: 100%;
+    height: auto;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .maybachpicture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+  }
+
+  .infomaybach {
+    width: 100%;
+    gap: 20px;
+    text-align: center;
+  }
+}
