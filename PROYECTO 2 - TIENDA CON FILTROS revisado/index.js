@@ -306,8 +306,7 @@ const aplicarFiltros = () => {
     } else if (productosFiltrados.length > 0) {
       
         pintarProductos(productosFiltrados);
-    } else if (filtrosAplicados.genero === "Niños") {
-       
+    } else {
         obtenerProductosAleatorios(3); 
         pintarProductos(productosRandom); 
         pintarTexto();
